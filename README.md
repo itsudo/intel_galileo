@@ -1,6 +1,6 @@
 # Intel::Galileo
 
-Gem for interacting with Intel Galileo board
+Gem for interacting with Intel Galileo board. So far it only works with digital pins.
 
 ## Installation
 
