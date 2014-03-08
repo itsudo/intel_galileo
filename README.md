@@ -1,10 +1,16 @@
-# Intel::Galileo
+# IntelGalileo
 
 Gem for interacting with Intel Galileo board. So far it only works with digital pins.
 
+## Ruby installation on Galileo
+
+Some images have devtools installed on board by default - in that case compile [ruby from source](https://www.ruby-lang.org/en/downloads/).
+
+If you don't have gcc on board, follow [custom image installation](http://www.itsudo.com/galileo/2014/03/03/setting-up-development-environment-for-galileo.html) and [customization](http://www.itsudo.com/galileo/yocto/ruby/2014/03/05/customizing-what-goes-onto-yocto-image.html) posts.
+
 ## Installation
 
-Add this line to your application's Gemfile:
+If you have ruby installed, add this line to your application's Gemfile:
 
     gem 'intel_galileo'
 
