@@ -1,6 +1,6 @@
-require "intel_galileo"
+require "../../lib/intel_galileo"
 
-led    = IntelGalileo::Pin.new(7)
+led    = IntelGalileo::DigitalPin.new(7)
 
 while true do
   led.write(1)
@@ -8,4 +8,3 @@ while true do
   led.write(0)
   sleep(1)
 end
-
