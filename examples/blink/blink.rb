@@ -1,4 +1,4 @@
-require "../../lib/intel_galileo"
+require File.dirname(File.absolute_path(__FILE__)) + "/../../lib/intel_galileo"
 
 led    = IntelGalileo::DigitalPin.new(7)
 
