@@ -1,7 +1,8 @@
 module IntelGalileo
   class DigitalPin < Pin
+    attr_reader :gpio
     def initialize(pin)
-      @gpio = IntelGalileo::Gpio.new(IntelGalileo.digital_pin2gpio(pin))
+      @gpio = get_gpio(pin)
       @direction = nil
     end
     
@@ -11,6 +12,12 @@ module IntelGalileo
     
     def write(value)
       @gpio.write(value)
+    end
+    
+    private
+
+    def get_gpio(pin)
+      IntelGalileo::Gpio.new(IntelGalileo.digital_pin2gpio(pin))
     end
   end
 end

@@ -2,11 +2,7 @@ module IntelGalileo
   class AnalogInPin < Pin
     def initialize(pin)
       @pin = pin
-      @mux_gpio = IntelGalileo::Gpio.new(IntelGalileo.analog_in_pin2mux(pin))
-      @mux_gpio.ensureDrive('strong')
-      @mux_gpio.ensureDirection('out')
-      @mux_gpio.write(0)
-      @direction = nil
+      set_mux_gpio(pin)
     end
     
      def read
@@ -15,6 +11,19 @@ module IntelGalileo
       f.close
       puts "Reading"
       return value
+    end
+
+    private
+    
+    def get_mux_gpio(pin)
+      IntelGalileo::Gpio.new(IntelGalileo.analog_in_pin2mux(pin))
+    end
+
+    def set_mux_gpio(pin)
+      mux_gpio = get_mux_gpio(pin)
+      mux_gpio.ensureDrive('strong')
+      mux_gpio.ensureDirection('out')
+      mux_gpio.write(0)
     end
   end
 end
