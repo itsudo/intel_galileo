@@ -41,6 +41,11 @@ Analog In:
 
 For more examples please see `/examples` folder
 
+## TODO
+
+  * tests
+  * Support for PWM
+
 ## Contributing
 
 1. Fork it
