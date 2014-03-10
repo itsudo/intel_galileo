@@ -1,6 +1,6 @@
 # IntelGalileo
 
-Gem for interacting with Intel Galileo board. So far it only works with digital pins.
+Gem for interacting with Intel Galileo board. For now this ruby library supports Digital In/Out Pins (0 - 13) and Analog In Pins (A0-A5) only.
 
 ## Ruby installation on Galileo
 
@@ -24,7 +24,22 @@ Or install it yourself as:
 
 ## Usage
 
-See `/examples`
+Digital In:
+
+  led    = IntelGalileo::DigitalPin.new(7)
+  led.write(1) # Write 0 or 1
+  
+Digital Out:
+
+  button = IntelGalileo::DigitalPin.new(5)
+  puts button.read # returns 0 or 1
+  
+Analog In:
+  
+  potentiometer = IntelGalileo::AnalogInPin.new('A0')
+  puts potentiometer.read # returns value between 0 and 4095
+
+For more examples please see `/examples` folder
 
 ## Contributing
 
