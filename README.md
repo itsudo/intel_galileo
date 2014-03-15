@@ -28,18 +28,18 @@ Or install it yourself as:
 
 Digital In:
 
-  led    = IntelGalileo::DigitalPin.new(7)
-  led.write(1) # Write 0 or 1
+    led    = IntelGalileo::DigitalPin.new(7)
+    led.write(1) # Write 0 or 1
   
 Digital Out:
 
-  button = IntelGalileo::DigitalPin.new(5)
-  puts button.read # returns 0 or 1
+    button = IntelGalileo::DigitalPin.new(5)
+    puts button.read # returns 0 or 1
   
 Analog In:
   
-  potentiometer = IntelGalileo::AnalogInPin.new('A0')
-  puts potentiometer.read # returns value between 0 and 4095
+    potentiometer = IntelGalileo::AnalogInPin.new('A0')
+    puts potentiometer.read # returns value between 0 and 4095
 
 For more examples please see `/examples` folder
 
