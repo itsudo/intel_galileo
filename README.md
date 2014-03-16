@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/itsudo/intel_galileo.png)](https://travis-ci.org/itsudo/intel_galileo)
 
-Gem for interacting with Intel Galileo board. For now this ruby library supports Digital In/Out Pins (0 - 13) and Analog In Pins (A0-A5) only.
+Gem for interacting with Intel Galileo board with support for Digital In/Out Pins (0 - 13), Analog In Pins (A0-A5)  and PWM pins [3,5,6,9,10,11].
 
 ## Ruby installation on Galileo
 
