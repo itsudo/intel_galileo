@@ -41,6 +41,12 @@ Analog In:
     potentiometer = IntelGalileo::AnalogInPin.new('A0')
     puts potentiometer.read # returns value between 0 and 4095
 
+[PWM](http://en.wikipedia.org/wiki/Pulse-width_modulation):
+
+    led = IntelGalileo::Pwm.new(3)
+    led.on(50) # led will be dimmed (50% of the brightness)
+    led.off
+
 For more examples please see `/examples` folder
 
 ## TODO

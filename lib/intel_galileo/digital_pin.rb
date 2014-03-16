@@ -6,7 +6,7 @@ module IntelGalileo
       @direction = nil
     end
     
-     def read
+    def read
       @gpio.read()
     end
     
