@@ -1,5 +1,5 @@
 module IntelGalileo
-  class DigitalPin < Pin
+  class DigitalPin
     attr_reader :gpio
     def initialize(pin)
       @gpio = get_gpio(pin)

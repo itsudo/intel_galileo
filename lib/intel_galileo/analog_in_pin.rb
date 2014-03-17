@@ -1,5 +1,5 @@
 module IntelGalileo
-  class AnalogInPin < Pin
+  class AnalogInPin
     def initialize(pin)
       @pin = pin
       set_mux_gpio(pin)
