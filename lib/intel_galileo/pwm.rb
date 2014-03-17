@@ -1,5 +1,15 @@
 module IntelGalileo
   class Pwm
+
+    PIN2GPIO_MAP = {
+      3 => 3,
+      5 => 5,
+      6 => 6,
+      9 => 1,
+      10 => 7,
+      11 => 4
+    }
+
   	def initialize(pin)
   	  @pwm = get_pwm(pin)
       self.enable()
@@ -38,7 +48,7 @@ module IntelGalileo
     end
 
     def get_pwm(pin)
-      IntelGalileo.pin2pwm(pin)
+      PIN2GPIO_MAP[pin]
     end
     
     def exported?

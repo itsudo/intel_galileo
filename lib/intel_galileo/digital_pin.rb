@@ -1,6 +1,23 @@
 module IntelGalileo
   class DigitalPin
-    attr_reader :gpio
+
+    PIN2GPIO_MAP = {
+      0  => 50,
+      1  => 51,
+      2  => 32,
+      3  => 18,
+      4  => 28,
+      5  => 17,
+      6  => 24,
+      7  => 27,
+      8  => 26,
+      9  => 19,
+      10 => 16,
+      11 => 25,
+      12 => 38,
+      13 => 39
+    }
+
     def initialize(pin)
       @gpio = get_gpio(pin)
       @direction = nil
@@ -17,7 +34,7 @@ module IntelGalileo
     private
 
     def get_gpio(pin)
-      IntelGalileo::Gpio.new(IntelGalileo.digital_pin2gpio(pin))
+      IntelGalileo::Gpio.new(PIN2GPIO_MAP[pin])
     end
   end
 end
